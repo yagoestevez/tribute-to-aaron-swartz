@@ -15,11 +15,45 @@
   <title>Tribute to Aaron Swartz made by Yago Estévez</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
-  <main id="main">
-    <h1 id="title">Aaron Swartz</h1>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar fixed-bottom navbar-expand navbar-dark bg-transparent">  
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#main">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#quotes">Quotes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#links">Links</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- End of Nav Bar-->
+
+  <!-- Home section -->
+  <header id="home" class="section hero-bg h-100">
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center">
+        <div class="title col-10 col-sm-12 my-auto text-right">
+          <h1>Aaron <span class="highlighted">Swartz</span></h1>
+          <p>— The <span class="highlighted">Internet</span>'s Own Boy —</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End of Home section -->
+
+  <main id="main" class="section">
+    <h2 id="title">Aaron Swartz</h2>
     <div id="img-div">
       <!--
         - The image should responsively resize, relative to the width
@@ -35,9 +69,17 @@
     </div>
   </main>
 
+  <div id="quotes" class="section hero-bg h-100">
+    asdasdsda
+  </div>
+
+  <div id="links" class="section hero-bg h-100">
+    asdasdsda
+  </div>
+
   <script src="bundle.js"></script>
   <!-- FreeCodeCamp Testing Module -->
-  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>

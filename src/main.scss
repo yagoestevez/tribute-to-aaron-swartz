@@ -2,4 +2,64 @@
  *  Brought to you by Yago Estévez. https://twitter.com/yagoestevez
  */
 
-@import 'reset.css';
+/** Imports **/
+@import './Assets/bootstrap-4.1.3/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/** Variables **/
+$black: #000000;
+$red: #fe0000;
+
+/** Selectors and Elements **/
+html, body {
+  height: 100%;
+  font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+  position: relative;
+}
+
+#navbar {
+  transition: 300ms;
+
+  &.bg-black {
+    background: rgba( $black, 0.8 ) !important;
+  }
+  // .active a {
+  //   color: $red !important;
+  // }
+  a {
+    outline: none;
+  }
+}
+
+#home {
+  background: url(./Assets/Images/HeroBackground.jpeg);
+  background-size: cover;
+  background-position: left;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 50% 100%, 0% 100%);
+  z-index: -1;
+
+  .title {
+    color: #fef;
+    line-height: 1rem;
+    text-shadow: 0px 0px 15px rgba( $black, 0.3 );
+
+    h1 {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+    p {
+      color: #eee;
+      font-size: 1.4rem;
+    }
+
+  }
+}
+
+
+
+.highlighted {
+  color: $red;
+}
