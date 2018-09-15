@@ -37,16 +37,22 @@ body {
   .justified {
     text-align: justify;
   }
-}
-
-a, a:visited {
-  color: $red;
-  outline: none;
-  transition: 300ms;
-
-  &:hover {
-    text-decoration: none;
-    color: $black;
+  a, a:visited {
+    color: $red;
+    outline: none;
+    transition: 300ms;
+  
+    &:hover {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+  .show {
+    opacity: 1 !important;
+  }
+  .section {
+    opacity: 0;
+    transition: opacity 1.5s;
   }
 }
 
@@ -66,6 +72,7 @@ a, a:visited {
   background-position: left;
   background-attachment: fixed;
   clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 50% 100%, 0% 100%);
+  opacity: 1 !important;
   z-index: -1;
 
   .title {
@@ -81,7 +88,6 @@ a, a:visited {
       color: #eee;
       font-size: 1.4rem;
     }
-
   }
 }
 
@@ -187,7 +193,23 @@ a, a:visited {
   .quote-box {
     border-left: .3rem solid $red;
     background: $white;
-    padding: 3rem;
+    padding: 3rem 3rem 1rem 3rem;
+  }
+  // .carousel-inner {
+  //   display: flex;
+  // }
+  // .carousel-item {
+  //   flex-shrink: 0;
+  //   opacity: 0;
+  //   display: none;
+  //   transition: 300ms;
+  //   &.active {
+  //     display: block;
+  //     opacity: 1 !important;
+  //   }
+  // }
+  .carousel-control-prev, .carousel-control-next {
+    color: $black !important;
   }
 }
 
