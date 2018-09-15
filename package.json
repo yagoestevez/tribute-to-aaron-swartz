@@ -1,7 +1,7 @@
 {
-  "name": "easy-webpack",
-  "version": "1.0.1",
-  "description": "This is an basic and easy to use template/recipe made for Webpack.",
+  "name": "tribute-to-aaron-swartz",
+  "version": "1.0.0",
+  "description": "This is a tribute to Aaron Swartz.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js --open --host 0.0.0.0",
@@ -9,6 +9,8 @@
   },
   "author": "Yago Estévez",
   "keywords": [
+    "scss",
+    "javascript",
     "webpack",
     "template",
     "style-loader",
