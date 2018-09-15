@@ -195,19 +195,6 @@ body {
     background: $white;
     padding: 3rem 3rem 1rem 3rem;
   }
-  // .carousel-inner {
-  //   display: flex;
-  // }
-  // .carousel-item {
-  //   flex-shrink: 0;
-  //   opacity: 0;
-  //   display: none;
-  //   transition: 300ms;
-  //   &.active {
-  //     display: block;
-  //     opacity: 1 !important;
-  //   }
-  // }
   .carousel-control-prev, .carousel-control-next {
     color: $black !important;
   }
@@ -240,7 +227,7 @@ body {
 }
 
 @media only screen and (max-width: 990px) {
-  .section:not(#home):not(#quotes) {
+  .section:not(#home):not(#quotes):not(#credits) {
     height: auto !important;
   }
   #film {
@@ -255,7 +242,7 @@ body {
 }
 
 @media only screen and (max-height: 700px) {
-  .section:not(#home):not(#quotes) {
+  .section:not(#home):not(#quotes):not(#credits) {
     height: auto !important;
   }
   #film .row {
