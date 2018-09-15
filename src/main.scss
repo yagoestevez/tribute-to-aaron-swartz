@@ -10,7 +10,7 @@
 $black: #000000;
 $red: #fe0000;
 
-/** Selectors and Elements **/
+/** General Selectors and Elements **/
 html, body {
   height: 100%;
   font-family: 'Oswald', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
@@ -18,26 +18,53 @@ html, body {
 
 body {
   position: relative;
+  background: darken($white, 5);
+
+  .title-wrapper {
+    border-left: .2rem solid $red;
+    padding: 0rem 0 0rem .8rem;
+    margin-left: -1rem;
+  }
+  .separator {
+    width: 50px;
+    height: 1px;
+    background: rgba( $black, .5 );
+    margin: 1.4rem 0;
+  }
+  .highlighted {
+    color: $red;
+  }
+  .justified {
+    text-align: justify;
+  }
 }
 
+a, a:visited {
+  color: $red;
+  outline: none;
+  transition: 300ms;
+
+  &:hover {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+/** Navbar **/
 #navbar {
   transition: 300ms;
 
   &.bg-black {
-    background: rgba( $black, 0.8 ) !important;
-  }
-  // .active a {
-  //   color: $red !important;
-  // }
-  a {
-    outline: none;
+    background: rgba( $black, .8 ) !important;
   }
 }
 
+/** Home Section **/
 #home {
   background: url(./Assets/Images/HeroBackground.jpeg);
   background-size: cover;
   background-position: left;
+  background-attachment: fixed;
   clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 50% 100%, 0% 100%);
   z-index: -1;
 
@@ -58,8 +85,165 @@ body {
   }
 }
 
+/** Intro Section **/
+#main {  
+  #tribute-info {
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+  figure {
+    background: $white;
+    padding: 2rem 2rem 1.5rem 2rem;
 
+    img {
+      display: block;
+      width: 100%;
+      max-width: 1024px;
+      height: auto;
+      padding-bottom: .5rem;
+      transform: rotate(-1deg) scale(1.03);
+      filter: grayscale(100%);
+      transition: 300ms;
 
-.highlighted {
-  color: $red;
+      &:hover {
+        filter: grayscale(10%);
+        transform: rotate(0deg);
+      }
+    }
+    figcaption {
+      text-align: right;
+    }
+  }
+  a, a:visited {
+    color: $red;
+    outline: none;
+    padding-left: -.3rem;
+    transition: 300ms;
+  
+    &:hover {
+      text-decoration: none;
+      border-left: .3rem solid $red;
+      padding-left: .3rem;
+      color: $black;
+    }
+  }
+
+}
+
+/** Bio Section **/
+#bio {
+  background: $white;
+  font-size: 1.2rem;
+
+  p {
+    text-align: justify;
+  }
+}
+
+/** Film section **/
+#film {
+  background: lighten($black,10);
+  background: radial-gradient(ellipse at left, lighten($black,30) 0%, $black 100%);
+  font-size: 1.2rem;
+  color: $white;
+
+  .list-group-item {
+    background: transparent;
+    padding-left: 0;
+  }
+  #film-poster {
+    height: 80%;
+    text-align: center;
+  }
+  img {
+    height: 100% !important;
+    border: 1rem solid $white;
+    filter: grayscale(100%);
+    transform: rotate(-2deg);
+    transition: 300ms;
+    &:hover {
+      filter: grayscale(0%);
+      transform: rotate(0deg) scale(1.01);
+    }
+  }
+  a:hover {
+    color: $white;
+  }
+  .separator {
+    background: $white;
+    height: 1px;
+  }
+}
+
+/** Quotes section **/
+#quotes {
+  background: url(./Assets/Images/AaronSwartz.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 50% 100%, 0% 100%);
+  z-index: -1;
+
+  .quote-box {
+    border-left: .3rem solid $red;
+    background: $white;
+    padding: 3rem;
+  }
+}
+
+/** Credits **/
+#credits {
+  font-size: 1.4rem;
+  background: transparent;
+  background: repeating-linear-gradient(
+                90deg,
+                #fcfcfc,
+                #fcfcfc 10px,
+                #fafafa 10px,
+                #fafafa 20px
+              );
+
+  small {
+    font-size: 1rem;
+    font-style: italic;
+    color: lighten( $black, 40% );
+  }
+}
+
+/** Media Queries **/
+@media only screen and (max-device-width: 1366px) {
+  #home, #quotes {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .section:not(#home):not(#quotes) {
+    height: auto !important;
+  }
+  #film {
+    img {
+      height: auto !important;
+      width: 100% !important;
+    }
+    .film-card {
+      padding-top: 3rem;
+    }
+  }
+}
+
+@media only screen and (max-height: 700px) {
+  .section:not(#home):not(#quotes) {
+    height: auto !important;
+  }
+  #film .row {
+    flex-direction: column;
+    div {
+      width: 100% !important;
+      max-width: none;
+    }
+    .film-card {
+      margin-top: 5rem !important;
+    }
+  }
 }

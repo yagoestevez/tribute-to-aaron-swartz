@@ -15,7 +15,7 @@
   <title>Tribute to Aaron Swartz made by Yago Estévez</title>
 </head>
 
-<body data-spy="scroll" data-target="#navbar">
+<body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
   <!-- Nav Bar -->
@@ -26,13 +26,19 @@
           <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#main">Bio</a>
+          <a class="nav-link" href="#main">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bio">Bio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#film">Film</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#quotes">Quotes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#links">Links</a>
+          <a class="nav-link" href="#credits">Credits</a>
         </li>
       </ul>
     </div>
@@ -40,7 +46,7 @@
   <!-- End of Nav Bar-->
 
   <!-- Home section -->
-  <header id="home" class="section hero-bg h-100">
+  <header id="home" class="section h-100">
     <div class="container h-100">
       <div class="row h-100 justify-content-center">
         <div class="title col-10 col-sm-12 my-auto text-right">
@@ -52,29 +58,140 @@
   </header>
   <!-- End of Home section -->
 
-  <main id="main" class="section">
-    <h2 id="title">Aaron Swartz</h2>
-    <div id="img-div">
-      <!--
-        - The image should responsively resize, relative to the width
-          of its parent element, without exceeding its original size.
-        - The image should be centered within its parent element.
-      -->
-      <figure id="img-div">
-        <img id="image" src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg" alt="Aaron Swartz">
-        <figcaption id="img-caption">Aaron Swartz</figcaption>
-      </figure>
-      <div id="tribute-info">Description</div>
-      <a id="tribute-link" href="http://" rel="noreferrer noopener" target="_blank">Link</a>
+  <!-- Main section -->
+  <main id="main" class="section h-100 p-5">
+    <div class="container h-100">
+      <div id="img-div" class="row h-100">
+        <div class="col-md-6 my-auto">
+          <figure id="img-div">
+            <img id="image" src="./Assets/Images/Aaron_Wikipedia_Meetup.jpg" alt="Aaron Swartz">
+            <figcaption id="img-caption">Swartz at 2009 Boston Wikipedia Meetup</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6 my-auto pl-5">
+          <div class="col-md-12">
+            <div class="title-wrapper">
+              <h2 id="title">Aaron Swartz.</h2>
+              <small>November 8, 1986 — January 11, 2013</small>
+            </div>
+            <div class="separator"></div>
+            <p id="tribute-info">Someone involved in the development of the RSS (the web feed format), the Markdown publishing format, the Creative Commons organization, the website framework web.py, and the social news site Reddit. He was Aaron Hillel Swartz and this is his story.</p>
+            <a id="tribute-link" href="https://en.wikipedia.org/wiki/Aaron_Swartz" rel="noreferrer noopener" target="_blank">Aaron Swartz page on Wikipedia</a>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+  <!-- End of Main section -->
 
-  <div id="quotes" class="section hero-bg h-100">
-    asdasdsda
-  </div>
+  <!-- Bio section -->
+  <section id="bio" class="section h-100 p-5">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-md-12 my-auto">
+          <div>
+            <h3 class="title">About <span class="highlighted">Aaron</span>.</h3>
+            <div class="separator"></div>
+            <div class="row">
+              <div class="col-md-12">
+                <p>Aaron Hillel Swartz (November 8, 1986 – January 11, 2013) was an American computer programmer, entrepreneur, writer, political organizer, and Internet hacktivist. He was involved in the development of the web feed format <a href="https://en.wikipedia.org/wiki/RSS" rel="noreferrer noopener" target="_blank">RSS</a> and the <a href="https://en.wikipedia.org/wiki/Markdown" rel="noreferrer noopener" target="_blank">Markdown</a> publishing format, the organization <a href="https://en.wikipedia.org/wiki/Creative_Commons" rel="noreferrer noopener" target="_blank">Creative Commons</a>, and the website framework web.py, and was a co-founder of the social news site <a href="https://www.reddit.com/" rel="noreferrer noopener" target="_blank">Reddit</a>. He was given the title of co-founder by <a href="https://en.wikipedia.org/wiki/Y_Combinator" rel="noreferrer noopener" target="_blank">Y Combinator</a> owner <a href="https://en.wikipedia.org/wiki/Paul_Graham_(programmer)" rel="noreferrer noopener" target="_blank">Paul Graham</a> after the formation of not a bug, inc (a merger of Aaron's project infogami and a company run by <a href="https://en.wikipedia.org/wiki/Alexis_Ohanian" rel="noreferrer noopener" target="_blank">Alexis Ohanian</a> and <a href="https://en.wikipedia.org/wiki/Steve_Huffman" rel="noreferrer noopener" target="_blank">Steve Huffman</a>).</p>
+                <p>Swartz's work also focused on civic awareness and activism. He helped launch the <a href="https://en.wikipedia.org/wiki/Progressive_Change_Campaign_Committee" rel="noreferrer noopener" target="_blank">Progressive Change Campaign Committee</a> in 2009 to learn more about effective online activism. In 2010, he became a research fellow at Harvard University's Safra Research Lab on Institutional Corruption, directed by <a href="https://en.wikipedia.org/wiki/Lawrence_Lessig" rel="noreferrer noopener" target="_blank">Lawrence Lessig</a>. He founded the online group <a href="https://en.wikipedia.org/wiki/Demand_Progress" rel="noreferrer noopener" target="_blank">Demand Progress</a>, known for its campaign against the <a href="https://en.wikipedia.org/wiki/Stop_Online_Piracy_Act" rel="noreferrer noopener" target="_blank">Stop Online Piracy Act</a>.</p>
+                <p>In 2011, Swartz was arrested by Massachusetts Institute of Technology (MIT) police on state breaking-and-entering charges, after connecting a computer to the MIT network in an unmarked and unlocked closet, and setting it to download academic journal articles systematically from <a href="https://en.wikipedia.org/wiki/JSTOR" rel="noreferrer noopener" target="_blank">JSTOR</a> using a guest user account issued to him by MIT. Federal prosecutors later charged him with two counts of wire fraud and eleven violations of the Computer Fraud and Abuse Act, carrying a cumulative maximum penalty of $1 million in fines, 35 years in prison, asset forfeiture, restitution, and supervised release.</p>
+                <p>Swartz declined a plea bargain under which he would have served six months in federal prison. Two days after the prosecution rejected a counter-offer by Swartz, he was found dead in his Brooklyn apartment, where he had hanged himself.</p>
+                <p>In 2013, Swartz was inducted posthumously into the <a href="https://en.wikipedia.org/wiki/Internet_Hall_of_Fame" rel="noreferrer noopener" target="_blank">Internet Hall of Fame</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Bio section -->
 
-  <div id="links" class="section hero-bg h-100">
-    asdasdsda
+  <!-- Film section -->
+  <section id="film" class="section h-100 p-5">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div id="film-poster" class="col-lg-6 my-auto">
+          <img
+            src="./Assets/Images/InternetsOwnBoy_Poster.jpg"
+            alt="The Internet's Own Boy Film" />
+        </div>
+        <div class="film-card col-lg-6 my-auto">
+          <div class="title-wrapper">
+            <h2 id="title">The Internet's Own Boy.</h2>
+            <small>THE STORY OF AARON SWARTZ</small>
+          </div>
+          <div class="separator"></div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Chronicling programming prodigy Aaron Swartz's efforts crusading for open access and the resulting legal nightmare and tragedy that ensued, "The Internet's Own Boy" is a dynamic portrait of a brilliant tech millionaire who renounced the values of Silicon Valley startup culture and used technology to tirelessly fight for social justice, no matter what the cost.</li>
+            <li class="list-group-item"><span class="highlighted">Director</span>: Brian Knappenberger</li>
+            <li class="list-group-item"><span class="highlighted">Category</span>: Documentary</li>
+            <li class="list-group-item"><span class="highlighted">Duration</span>: 104min</li>
+            <li class="list-group-item">
+              To watch the film on YouTube, 
+              <a
+                href="https://www.youtube.com/watch?v=9vz06QO3UkQ" 
+                rel="noreferrer noopener" target="_blank">
+                Click here
+              </a>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Film section -->
+
+  <!-- Quotes section -->
+  <section id="quotes" class="section h-100 p-5">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-md-6 my-auto quote-box">
+            <div>
+              <h2><span class="highlighted">Information is power</span>. But like all power, there are those who want to keep it for themselves.</h2>
+              <div class="separator"></div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p>
+                    July, 2008. Aaron Swartz on 
+                    <a
+                      href="http://archive.org/details/GuerillaOpenAccessManifesto"
+                      rel="noreferrer noopener" target="_blank">
+                      Guerilla Open Access Manifesto 
+                    </a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Quotes section -->
+
+  <div id="credits" class="section h-100">
+    <div class="container h-100">
+      <div class="row h-100 justify-content-center">
+        <div class="col-10 col-sm-12 my-auto text-right">
+          <p class="mb-0">
+            Proudly made by 
+            <a
+              href="https://twitter.com/yagoestevez"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="Yago Estévez on Twitter"
+              title="Yago Estévez on Twitter"
+              > Yago Estévez
+            </a>
+          </p>
+          <small>Images and text were taken from Wikipedia.</small>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="bundle.js"></script>
