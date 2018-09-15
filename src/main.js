@@ -5,6 +5,25 @@ require( "babel-runtime/regenerator" );
 require( './index.html'              );
 require( './main.scss'               );
 
+/** Preloader **/
+(function preloader ( images ) {
+  const preloaderDiv = document.querySelector( '#preloader' );
+  let loadedImages = images.length - 1;
+  images.map( img => {
+    const imgHolder = new Image( );
+    imgHolder.src = img;
+    imgHolder.onload = ( ) => {
+      if ( loadedImages === 0 ) preloaderDiv.setAttribute( 'style', 'opacity: 0' );
+      else                      loadedImages -= 1;
+    }
+  } )
+})( [
+  'https://github.com/yagoestevez/tribute-to-aaron-swartz/raw/master/src/Assets/Images/Aaron_Wikipedia_Meetup.jpg',
+  'https://github.com/yagoestevez/tribute-to-aaron-swartz/raw/master/src/Assets/Images/InternetsOwnBoy_Poster.jpg',
+  'https://github.com/yagoestevez/tribute-to-aaron-swartz/raw/master/src/Assets/Images/HeroBackground.jpeg',
+  'https://github.com/yagoestevez/tribute-to-aaron-swartz/raw/master/src/Assets/Images/AaronSwartz.jpg'
+] );
+
 /** Smooth Scrolling **/
 (function navSmoothScrolling ( ) {
   const navLinks = document.querySelectorAll( '.nav-link' );
