@@ -13,8 +13,12 @@ require( './main.scss'               );
     const imgHolder = new Image( );
     imgHolder.src = img;
     imgHolder.onload = ( ) => {
-      if ( loadedImages === 0 ) preloaderDiv.setAttribute( 'style', 'opacity: 0' );
-      else                      loadedImages -= 1;
+      if ( loadedImages === 0 ) {
+        preloaderDiv.setAttribute( 'style', 'opacity: 0' );
+        setTimeout( ( ) => preloaderDiv.setAttribute( 'style', 'display: none' ), 500 )
+      } else {
+        loadedImages -= 1;
+      }
     }
   } )
 })( [
@@ -34,6 +38,7 @@ require( './main.scss'               );
         e.preventDefault( );
         document.querySelector( navLinks[ n ].hash )
           .scrollIntoView( {
+            block   : "start",
             behavior: "smooth"
           } );
       } );
