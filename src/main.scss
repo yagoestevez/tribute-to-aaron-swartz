@@ -151,6 +151,7 @@ body {
   background: lighten($black,10);
   background: radial-gradient(ellipse at left, lighten($black,30) 0%, $black 100%);
   font-size: 1.2rem;
+  text-align: justify;
   color: $white;
 
   .list-group-item {
@@ -241,8 +242,21 @@ body {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  #main {
+    .main-desc {
+      padding: 0 !important;
+    }
+  }
+  #film {
+    .film-synopsis {
+      padding-right: 0 !important;
+    }
+  }
+}
+
 @media only screen and (max-height: 700px) {
-  .section:not(#home):not(#quotes):not(#credits) {
+  .section:not(#home):not(#credits) {
     height: auto !important;
   }
   #film .row {
